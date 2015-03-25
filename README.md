@@ -1,6 +1,6 @@
-# [forms-js](https://github.com/forms-js/forms-js) web component
+# `<checkbox-list>`
 
-> [forms-js](https://github.com/forms-js/forms-js) web component adapter 
+> A web component for listed checkboxes and optionally a "check all" checkbox
 
 ## Warning: under development
 
@@ -8,14 +8,14 @@ This project is under development and is not ready for use. Please checkout the 
 
 ## Installation
 
-1. Install froms-js web component using npm or Bower
+1. Install using npm or Bower
 
     ```shell
-    npm install forms-js-web-component
+    npm install checkbox-list
     ```
 
     ```shell
-    bower install forms-js-webcomponent
+    bower install checkbox-list
     ```
 
 2. Use HTML Import 
@@ -23,47 +23,40 @@ This project is under development and is not ready for use. Please checkout the 
     In your `<head>`:
 
     ```html
-    <link rel="import" href="forms-js-webcomponent/dist/index.html">
+    <link rel="import" href="checkbox-list/dist/index.html">
     ```
-3. Use FormsJS element in HTML or programmability 
+3. Use `CheckboxListElement` element in HTML or programmability 
     
     **HTML**
     ```html
-    <form is="forms-js" model="{/*..*/}" view="{/*..*/}" validation="{/*..*/}"></form>
+    <checkbox-list>
+        <label><input checkbox-list-all="true" type="checkbox">All</label>
+        <label><input type="checkbox">Checking</label>
+        <label><input type="checkbox">Saving</label>
+    </checkbox-list>
     ```
 
     **JavaScript**
     ```js
-        var aForm = new formsjs.FormElement();
-        aForm.model = aModel;
-        aForm.validation = aValidation;
-        aForm.view = aView;
-        document.body.appendChild(aForm);
+    var list = document.createElement('checkbox-list');
+    
+    var all = document.createElement('input');
+    all.setAttribute('type', 'checkbox');
+    all.setAttribute('checkbox-list-all', 'true');
+
+    var checking = document.createElement('input');
+    checking.setAttribute('type', 'checkbox');
+
+    var saving = document.createElement('input');
+    saving.setAttribute('type', 'checkbox');
+
+    list.appendChild(all);
+    list.appendChild(checking);
+    list.appendChild(saving);
+
+    document.body.appendChild(list);
+
     ```
-
-##API
-
-FormsJS inherits from `HTMLFormElement`. 
-
-#### Configurations
-
-##### `model` (required)
-
-TODO
-
-##### `view`
-
-TODO
-
-##### `validation`
-
-TODO
-
-#### Getter/Setter and Hooks
-
-##### `getFormData`
-Returns a `FormData` object from data inputed into the form
-
 
 ## Development
 

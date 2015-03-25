@@ -1,24 +1,23 @@
 {
-  "name": "forms-js-web-component",
+  "name": "checkbox-list",
   "version": "0.0.0",
-  "description": "FormsJS web component",
+  "description": "checkbox list",
   "main": "dist/index.html",
   "scripts": {
     "test": "gulp build"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/forms-js/web-component.git"
+    "url": "https://github.com/mohsen1/checkbox-list.git"
   },
   "author": "",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/forms-js/web-component/issues"
+    "url": "https://github.com/mohsen1/checkbox-list/issues"
   },
-  "homepage": "https://github.com/forms-js/web-component",
+  "homepage": "https://github.com/mohsen1/checkbox-list",
   "devDependencies": {
     "event-stream": "^3.3.0",
-    "forms-js": "0.0.2",
     "gulp": "^3.8.11",
     "gulp-babel": "^4.0.0",
     "gulp-concat": "^2.5.2",
