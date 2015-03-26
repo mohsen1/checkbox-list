@@ -12,7 +12,7 @@
       <p>Simply import <code>dist/index.html</code> in your HTML file and use <code>&lt;checkbox-list&gt;</code> element.</p>
     </div>
     <div class="usage">
-      <h4>Usage</h4>
+      <h4>Simple Usage</h4>
       <pre>
 Select bank account:
 &lt;checkbox-list&gt;
@@ -27,6 +27,19 @@ Select bank account:
           <label><input checkbox-list-all="true" type="checkbox">All</label>
           <label><input type="checkbox">Checking</label>
           <label><input type="checkbox">Saving</label>
+      </checkbox-list>
+    </div>
+    <div class="usage">
+      <h4>Nested</h4>
+      <checkbox-list>
+          <label><input checkbox-list-all="true" type="checkbox">All</label>
+          <label><input type="checkbox">Checking</label>
+          <label><input type="checkbox">Saving</label>
+          <checkbox-list>
+            <label><input checkbox-list-all="true" type="checkbox">All investments</label>
+            <label><input type="checkbox">IRA</label>
+            <label><input type="checkbox">401k</label>
+          </checkbox-list>
       </checkbox-list>
     </div>
   </body>

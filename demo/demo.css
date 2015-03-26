@@ -20,8 +20,13 @@ checkbox-list label {
   cursor: pointer;
 }
 checkbox-list label:first-child { /* the "All" checkbox" */
-  font-weight: bold;
+  /*font-weight: bold;*/
 }
 checkbox-list label:not(:first-child) {
   margin-left: 1em;
+}
+
+/* Nested */
+checkbox-list checkbox-list {
+    padding-left: 1em;
 }
