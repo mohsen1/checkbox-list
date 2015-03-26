@@ -2,10 +2,6 @@
 
 > A web component for listed checkboxes and optionally a "check all" checkbox
 
-## Warning: under development
-
-This project is under development and is not ready for use. Please checkout the code and look at the issue tracker if you want to contribute
-
 ## Installation
 
 1. Install using npm or Bower
