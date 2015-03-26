@@ -26,7 +26,7 @@ var banner = [
 ].join('\n');
 
 function scripts() {
-  return gulp.src('src/js/main.js')
+  return gulp.src(['src/js/polyfill.js', 'src/js/main.js'])
     .pipe(babel())
     .on('error', log)
     .pipe(wrap('(function(){\n<%= contents %>\n}).call(this);'))
@@ -42,18 +42,13 @@ function styles() {
     .pipe(connect.reload());
 }
 
-function html() {
-  return gulp.src('src/template/index.html')
-    .pipe(connect.reload());
-}
 
 gulp.task('build', function () {
   return es.merge([
-    html(),
     styles(),
     scripts()
   ])
-  .pipe(order(['template.html', 'styles.css', 'scripts.js']))
+  .pipe(order(['styles.css', 'scripts.js']))
   .pipe(concat('index.html'))
   .pipe(header(banner, {pkg: pkg}))
   .pipe(gulp.dest('dist'));
