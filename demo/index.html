@@ -4,6 +4,7 @@
     <title>CheckboxListElement Component Demo</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
     <link rel="import" href="../dist/index.html">
+    <link rel="stylesheet" href="demo.css">
   </head>
   <body>
     <div class="intro">
@@ -11,7 +12,17 @@
       <p>Simply import <code>dist/index.html</code> in your HTML file and use <code>&lt;checkbox-list&gt;</code> element.</p>
     </div>
     <div class="usage">
-      <h4>Simple Usage</h4>
+      <h4>Usage</h4>
+      <pre>
+Select bank account:
+&lt;checkbox-list&gt;
+  &lt;label&gt;&lt;input checkbox-list-all=&quot;true&quot; type=&quot;checkbox&quot;&gt;All&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Checking&lt;/label&gt;
+  &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Saving&lt;/label&gt;
+&lt;/checkbox-list&gt;
+      </pre>
+      <h4>Result</h4>
+      <div>Select bank account:</div>
       <checkbox-list>
           <label><input checkbox-list-all="true" type="checkbox">All</label>
           <label><input type="checkbox">Checking</label>

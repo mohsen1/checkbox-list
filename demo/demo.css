@@ -1,0 +1,27 @@
+body {
+  font-family: sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+pre {
+    background: #EFF8FA;
+    border: 1px solid lightgray;
+    padding: 1em;
+}
+
+code {
+    background: #efefef;
+    padding: .2em;
+}
+
+checkbox-list label {
+  display: block;
+  cursor: pointer;
+}
+checkbox-list label:first-child { /* the "All" checkbox" */
+  font-weight: bold;
+}
+checkbox-list label:not(:first-child) {
+  margin-left: 1em;
+}
