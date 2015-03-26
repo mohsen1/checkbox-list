@@ -1,8 +1,9 @@
 class CheckboxList extends HTMLElement {
   get boxes() {
     // A DOM query selector that selects all checkboxes other than "check all" checkbox
-    const BOXES_SELECTOR = 'input[type="checkbox"]:not([checkbox-list-all])';
-    return Array.from(this.querySelectorAll(BOXES_SELECTOR));
+    const BOXES_SELECTOR = 'input[type="checkbox"]';
+    return Array.from(this.querySelectorAll(BOXES_SELECTOR))
+      .filter(box => box !== this.allCheckbox);
   }
 
   createdCallback() {

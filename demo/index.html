@@ -12,17 +12,17 @@
       <p>Simply import <code>dist/index.html</code> in your HTML file and use <code>&lt;checkbox-list&gt;</code> element.</p>
     </div>
     <div class="usage">
-      <h4>Simple Usage</h4>
+      <h2>Simple</h2>
+      <h4>Code</h4>
       <pre>
 Select bank account:
 &lt;checkbox-list&gt;
   &lt;label&gt;&lt;input checkbox-list-all=&quot;true&quot; type=&quot;checkbox&quot;&gt;All&lt;/label&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Checking&lt;/label&gt;
   &lt;label&gt;&lt;input type=&quot;checkbox&quot;&gt;Saving&lt;/label&gt;
-&lt;/checkbox-list&gt;
-      </pre>
+&lt;/checkbox-list&gt;</pre>
       <h4>Result</h4>
-      <div>Select bank account:</div>
+      Select bank account:
       <checkbox-list>
           <label><input checkbox-list-all="true" type="checkbox">All</label>
           <label><input type="checkbox">Checking</label>
@@ -30,7 +30,21 @@ Select bank account:
       </checkbox-list>
     </div>
     <div class="usage">
-      <h4>Nested</h4>
+      <h2>Nested</h2>
+      <h4>Code</h4>
+      <pre>Select bank account:
+&#x3C;checkbox-list&#x3E;
+  &#x3C;label&#x3E;&#x3C;input checkbox-list-all=&#x22;true&#x22; type=&#x22;checkbox&#x22;&#x3E;All&#x3C;/label&#x3E;
+  &#x3C;label&#x3E;&#x3C;input type=&#x22;checkbox&#x22;&#x3E;Checking&#x3C;/label&#x3E;
+  &#x3C;label&#x3E;&#x3C;input type=&#x22;checkbox&#x22;&#x3E;Saving&#x3C;/label&#x3E;
+  &#x3C;checkbox-list&#x3E;
+    &#x3C;label&#x3E;&#x3C;input checkbox-list-all=&#x22;true&#x22; type=&#x22;checkbox&#x22;&#x3E;All investments&#x3C;/label&#x3E;
+    &#x3C;label&#x3E;&#x3C;input type=&#x22;checkbox&#x22;&#x3E;IRA&#x3C;/label&#x3E;
+    &#x3C;label&#x3E;&#x3C;input type=&#x22;checkbox&#x22;&#x3E;401k&#x3C;/label&#x3E;
+  &#x3C;/checkbox-list&#x3E;
+&#x3C;/checkbox-list&#x3E;</pre>
+      <h4>Result</h4>
+      Select bank account:
       <checkbox-list>
           <label><input checkbox-list-all="true" type="checkbox">All</label>
           <label><input type="checkbox">Checking</label>
