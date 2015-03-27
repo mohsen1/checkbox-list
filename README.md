@@ -34,7 +34,7 @@
 
     **JavaScript**
     ```js
-    var list = document.createElement('checkbox-list');
+    var list = document.createElement('input', 'checkbox-list');
     
     var all = document.createElement('input');
     all.setAttribute('type', 'checkbox');
